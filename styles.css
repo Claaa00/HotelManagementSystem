@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f0ebe3;
+}
+
+.container {
+  max-width: 83%;
+  margin-left: 17%; /* Same as the width of the sidenav */
+  font-size: 28px;
+  padding: 0px 20px 20px 20px;
+}
+
+.error-message-container {
+  max-width: 100%;
+  background-color: #18978f;
+  margin: 0;
+  padding: 100px;
+}
+
+.error-message-code,
+.error-message-label {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.error-message-code {
+  font-size: 200px;
+  line-height: 200px;
+}
+
+.error-message-label {
+  font-size: 60px;
+  line-height: 70px;
+}
+
+/* sidenav logo and hotel name */
+.title-logo-div {
+  display: block;
+  justify-content: center;
+  margin: 20px 0px 50px 0px;
+  max-width: 100%;
+}
+
+.logo-div {
+  display: flex;
+  justify-content: center;
+  padding: 0px 8px 10px 8px;
+}
+
+.logo-div img {
+  max-width: 150px;
+  border-radius: 500px;
+  margin-inline: 0;
+  padding: 0;
+}
+
+.hotel-name-label {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  max-width: 100%;
+  text-align: center;
+  margin-inline: 0;
+  padding-inline: 8px;
+}
+
+/* sidenav navs */
+.sidenav {
+  height: 100%;
+  width: 17%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #54bab9;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 12px 15px 12px 10px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  display: block;
+  letter-spacing: 1.5 px;
+  text-align: right;
+}
+
+.sidenav a:hover {
+  color: white;
+  background-color: #18978f;
+  font-weight: bold;
+}
+
+.sidenav .active {
+  color: white;
+  background-color: #18978f;
+  font-weight: bold;
+}
+
+/* contents */
+.dashboard-img-div img {
+  max-width: 100%;
+  margin: 0px 0px 15px 0px;
+  padding-top: 20px;
+}
+
+/* dashboard monitorings */
+.others-div {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.ongoing-reservations {
+  width: 55%;
+}
+
+/* dashboard table */
+.ongoing-reservations-label {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #18978f;
+  letter-spacing: 2px;
+  padding-block: 5px;
+}
+
+.dashboard-table-container {
+  overflow-y: auto;
+  height: 225px;
+}
+
+.dashboard-table-container thead th {
+  position: sticky;
+  top: 0;
+  background-color: #18978f;
+  color: white;
+  font-weight: bold;
+}
+
+.ongoing-reservations-table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #e9dac1;
+}
+.ongoing-reservations-table th,
+.ongoing-reservations-table td {
+  padding: 5px 10px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #54bab9;
+}
+
+.ongoing-reservations-table tr:hover {
+  background-color: #54bab9;
+}
+
+/* Rooms Available */
+.rooms-available {
+  width: 28%;
+}
+
+.rooms-available-label {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #18978f;
+  letter-spacing: 2px;
+  border-radius: 30px 30px 0px 0px;
+  background-color: white;
+  padding-block: 10px;
+}
+
+.rooms-available-count {
+  font-size: 130px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 2px;
+  border-radius: 0px 0px 30px 30px;
+  background-color: #18978f;
+  padding: 15px 0px 15px 0px;
+}
+
+/* Hotel Management */
+/* header/nav */
+.nav {
+  width: 100%;
+  height: 70px;
+  padding-top: 0;
+  border-bottom: 5px solid #18978f;
+}
+
+.nav ul {
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  display: inline-block;
+  align-content: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #18978f;
+  padding: 10px 20px 10px 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.nav a:hover {
+  background-color: #18978f;
+  color: white;
+}
+
+.nav .active {
+  background-color: #18978f;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 13px;
+  }
+  .hotel-name-label {
+    font-size: 15px;
+  }
+  .logo-div img {
+    max-width: 70px;
+  }
+  .ongoing-reservations-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  thead {
+    font-size: 15px;
+  }
+  tbody {
+    font-size: 15px;
+  }
+  .rooms-available-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .rooms-available-count {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 10px;
+  }
+  .hotel-name-label {
+    font-size: 13px;
+  }
+  .logo-div img {
+    max-width: 50px;
+  }
+  .others-div {
+    display: block;
+  }
+  .ongoing-reservations,
+  .rooms-available {
+    width: 100%;
+  }
+  .rooms-available {
+    margin-top: 15px;
+  }
+  /* .ongoing-reservations-label {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  thead {
+    font-size: 13px;
+  }
+  tbody {
+    font-size: 13px;
+  } */
+  .rooms-available-label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .rooms-available-count {
+    font-size: 100px;
+  }
+}
